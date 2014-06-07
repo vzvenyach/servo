@@ -1,0 +1,14 @@
+{
+  "name": "servo",
+  "version": "0.0.0",
+  "description": "A framework for Node Scraping",
+  "main": "servo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies":{
+  	"request":"*"
+  },
+  "author": "V David Zvenyach",
+  "license": "MIT"
+}
