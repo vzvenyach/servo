@@ -6,7 +6,7 @@ Borne out of an effort to make web scraping a little smarter in node, I'm buildi
 MIT
 
 # Usage
-`npm install`
+`npm install servojs`
 
 # API
 
