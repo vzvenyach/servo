@@ -25,8 +25,9 @@ Calculate a `sha256` for a particular url
 ```servo.getPageHash(site_url, callback)```
 
 ### getElementsFromPage
-Select elements from a particular url
+Get an array of selected elements from a particular url
 ```servo.getElementsFromPage(site_url, selector, callback)```
+Note that each item is a `cheerio` object, so you can call `.html()` or `.text()`
 
 ### getElementArrayHash
 Calculate the `sha256` for all selected elements (used in conjunction with getElementsFromPage)

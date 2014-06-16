@@ -69,7 +69,17 @@ exports.parsePage = function (site_url, callback) {
 
 exports.getElementsFromPage = function(site_url, elem, callback) {
 	this.parsePage(site_url, function ($) {
-		callback($(elem))
+		var res = $(elem);
+		if (res.length > 1) {
+			var resArray = [];
+			res.each(function (i, node) {
+				resArray[i] = cheerio(node)
+			})
+			callback(resArray)
+		}
+		else {
+			callback([res])
+		}
 	})
 }
 
@@ -82,8 +92,8 @@ exports.getHTMLElementsFromPage = function (site_url, elem, callback) {
 exports.getElementArrayHash = function (elems, callback) {
 	var hashArray = []
 	var self = this
-	elems.map(function (i, elem) {
-		self.getHash(cheerio(elem).html(), function (hash) {
+	elems.map(function (elem, i, array) {
+		self.getHash(elem.html(), function (hash) {
 			hashArray.push(hash)
 		})
 	})
