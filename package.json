@@ -1,6 +1,6 @@
 {
-  "name": "servo",
-  "version": "0.0.0",
+  "name": "servojs",
+  "version": "0.1.0",
   "description": "A framework for Node Scraping",
   "main": "servo.js",
   "scripts": {
@@ -9,9 +9,16 @@
   "dependencies":{
     "cheerio":"*",
     "elementtree":"*",
-    "libxmljs":"*",
   	"request":"*"
   },
   "author": "V David Zvenyach",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vzvenyach/servo.git"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "main": "./citation.js"
 }
