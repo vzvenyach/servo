@@ -73,6 +73,12 @@ exports.getElementsFromPage = function(site_url, elem, callback) {
 	})
 }
 
+exports.getHTMLElementsFromPage = function (site_url, elem, callback) {
+	this.getElementsFromPage(site_url, elem, function (node) {
+		callback(node.html())
+	})
+}
+
 exports.getElementArrayHash = function (elems, callback) {
 	var hashArray = []
 	var self = this
